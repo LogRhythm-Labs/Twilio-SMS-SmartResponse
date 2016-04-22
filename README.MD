@@ -8,27 +8,18 @@
 
 Blog Post => Coming soon...
 
-PSRecon gathers data from a remote Windows host using PowerShell (v2 or later), organizes the data into folders, hashes all extracted data, hashes PowerShell and various system properties, and sends the data off to the security team. The data can be pushed to a share, sent over email, or retained locally.
+Automate SMS alerting from the SIEM via <a href="https://www.twilio.com/">Twilio</a> SMS messaging integration.
 
-![email](/images/email-notification.png)
 
-One nice part about the report is that everything is self-contained, making it easy to share as there is no reliance on a centralize server. Even the images are encoded directly into the report's HTML.
-
-![reporting](/images/report-images.png)
-
-This script also includes endpoint lockdown functionality. This can be useful when working through a malware outbreak incident, especially when there is risk that the malware will spread to a share or other critical systems within the enterprise. Sometimes the quickest and most effective way to stop the spread of malware is to simply knock the host offline until IT/Security can respond, following the extraction of forensic data. Alternatively to quarantining the host, PSRecon allows you to disable an active directory account as well.
-
-Ideally, this script should be integrated with the organization's Active Defense frameworks to automate rapid forensic data acquisition and lock down the endpoint.
 
 ## [How To]
-
-#####Run Twilio-SMS on local host:
 
  	PS C:\> .\twilio-sms.ps1 -from_number [number] -to_number [number] -account_sid [sid] -auth_token [token] -message "Test Message"
         This will send a basic SMS message
 
     You can also hard-code these attributes if you'd like to run this manually
         if you do, ensure that you remove the code signing key
+
 
 ## [Parameter Breakdown]
 
@@ -37,6 +28,7 @@ Ideally, this script should be integrated with the organization's Active Defense
     -account_sid    :    Twilio Account SID
     -auth_token     :    Twilio Authentication Token
     -message        :    The SMS message text to send to the desired phone number.
+
 
 ## [License]
 

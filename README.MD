@@ -6,10 +6,9 @@
 
 ## [About]
 
-Blog Post => Coming soon...
+Blog Post => <a href="https://logrhythm.com/blog/sms-alerting-via-smartresponse/?utm_source=github">https://logrhythm.com/blog/sms-alerting-via-smartresponse/</a>
 
 Automate SMS alerting from the SIEM via <a href="https://www.twilio.com/">Twilio</a> SMS messaging integration.
-
 
 
 ## [How To]
